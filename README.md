@@ -12,7 +12,7 @@ IoT 개발자 C언어 리포지토리
 	#include <stdio.h> // stdio == 파일이름, .h == 헤더파일
 	int main()
 	{
-
+		printf("Hello World!!");
 		return 0;
 	}
 	```
