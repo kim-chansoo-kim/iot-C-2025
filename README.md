@@ -176,3 +176,200 @@ IoT 개발자 C언어 리포지토리
 		return 0;
 	}
 	```
+
+## 2일차
+- 논리·비트 연산자
+	1. && -> AND (둘 다 참이어야 참)
+	2. || -> OR (둘 중 하나라도 참이면 참)
+	3. ! -> NOT (참을 거짓으로, 거짓을 참으로)
+	4. ~ -> 비트 반전 (모든 비트를 0 <-> 1로 뒤집음, 결과적으로 -1을 뺀 음수 형태가 됨)
+
+	```C
+	#define _CRT_SECURE_NO_WARNINGS
+	#include <stdio.h>
+
+	int main()
+	{
+		int n = 30;
+		int res;
+		res = (n > 10) && (n < 20);	
+		printf("res: %d\n", res);
+		res = (n < 10) || (n > 20);	
+		printf("res: %d\n", res);
+		res = !(n >= 30);			
+		printf("res: %d\n", res);
+		res = ~n;					
+		printf("res: %d\n", res);
+		res = n << 1;				
+		printf("res: %x\n", res);
+		res = res >> 1;				
+		printf("res: %x\n", res);
+
+		int n2 = 143;				
+		res = n2 << 1;				
+		printf("res: %x\n", res);
+		res = res >> 1;				
+		printf("res: %x\n", res);
+		return 0;
+	}
+	```
+
+- 시프트 연산자
+	1. << -> 왼쪽 시프트 연산자(Left Shift)로, 비트를 왼쪽으로 이동시키는 연산
+	2. << -> 오른쪽 시프트 연산자(Right Shift)로, 비트를 오른쪽으로 이동시키는 연산
+
+	```C
+	#include <stdio.h>
+	int main()
+	{
+		char ch = 0x7f;					// 0b 0111 1111
+		unsigned char uch = 0x7f;
+		printf("ch: %x, uch: %x, ch: %u, uch: %u\n", ch, uch, ch, uch);
+
+		char ch1 = 0x9f;				// 0b 1001 1111
+		unsigned char uch1 = 0x9f;
+		printf("ch1: %x, uch1: %x\n", ch1, uch1);
+
+		ch1 >>= 1;						// 0b 1001 1111
+		uch1 >>= 1;						// 0b 0100 1111
+		printf("ch1: %x, uch1: %x\n", ch1, uch1);
+		ch1 != uch1;
+
+		return 0;
+	}
+	```
+	
+- 삼항 연산자
+	- (조건 ? 값1 : 값2)는 조건이 참이면 값1을 반환, 거짓이면 값2를 반환하는 연산자
+	- 삼항 연산자의 장점
+	    1. 코드가 간결해짐 → if-else 문보다 짧고 직관적.
+	    2. 단순한 조건 판단에 유용함 → 값을 바로 대입 가능.
+	    3. 복잡한 조건이 많다면 if-else를 사용하는 것이 가독성이 좋을 수도 있음.
+
+	```C
+	#include <stdio.h>
+	int main()
+	{
+		int n = 10, n2 = 20;
+		int res;
+
+		res = (n < n2) ? n : n2;
+		printf("res: %d\n", res);
+
+		res = n++;
+		printf("n++: %d, n: %d\n",res, n);
+		res = ++n2;
+		printf("++n2: %d, n2: %d\n", res, n2);
+
+		return 0;
+	}
+	```
+
+- 제어문
+	1. 선택제어문(if, switch)
+		- if문을 활용한 간단한 숫자찾기
+		```C
+		#include <stdio.h>
+
+		int main()
+		{
+			int n;
+			while (1) {
+				printf("수를 입력해주세요: ");
+				scanf_s("%d", &n);
+				if (n == 5) {
+					printf("정답!\n");
+					break;
+				}
+				else if (n < 5) {
+					printf("땡! 큰 숫자를 입력하세요!\n");
+				}
+				else {
+					printf("땡! 더 작은 숫자를 입력하세요!\n");
+				}
+			}
+			return 0;
+		}
+		```
+		- Switch문을 활용한 숫자 찾기
+		- 무언가 정확한 정답을 찍거나 경우의 수가 작을때 switch문을 사용
+		- case를 사용할때는 break를 까먹지 말고 쓰자!!
+		```C
+		/* Switch문 */
+		#include <stdio.h>
+
+		int main()
+		{
+			int num = 200;
+			int n = 0;
+			switch (num){
+			case 100:
+				printf("빙고");
+				break;							// 반복문을 벗어난다.
+
+			case 50:
+				printf("작음");
+				break;
+
+			case 200:
+				printf("큼");
+				break;
+
+			default:							// 생략 가능
+				printf("이것도 저것도 아님");
+				break;
+			}
+			return 0;
+		}
+
+		// switch(조건식) ~ case:
+		```
+	
+	2. 반복제어문(for, while)
+		- for문을 활용한 1~10까지의 합
+		- for문은 반복되는 구간이 정해진 상황에서 쓰기 편하다
+		- for(초기식; 조건식; 증감식;){ }
+		```C
+		/*for문*/
+		#include <stdio.h>
+
+		int main()
+		{
+			//for(초기식; 조건식; 증감식;){ }
+			for (int i = 0; i < 10; i++) {
+				printf("i: %d\n", i);
+			}
+			int sum = 0;
+			for (int i = 1; i <= 10; i++) {
+				sum += i;
+			}
+			printf("1~10까지 합은 %d입니다.", sum);
+			return 0;
+		}
+		```
+		- While문을 활용한 1~100까지의 합
+		```C
+		/*While문*/
+		#include <stdio.h>
+
+		int main()
+		{
+			int i = 1;
+			while (i < 6) {
+				printf("안녕하세요.%d\n", i++);
+			}
+			int i = 0;
+			while (i < 5) {
+				printf("안녕하세요.%d\n", i + 1);
+				i++;
+			}
+			int i = 1;
+			int sum = 0;
+			while (i <= 100) {
+				sum += i;
+				i++;
+			}
+			printf("1 ~ 100까지의 합: %d", sum);
+			return 0;
+		}
+		```

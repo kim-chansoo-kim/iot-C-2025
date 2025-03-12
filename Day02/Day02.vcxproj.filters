@@ -15,55 +15,52 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="HelloWorld.c">
+    <ClCompile Include="C01_oper.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="name.c">
+    <ClCompile Include="C02_shift.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="printf01.c">
+    <ClCompile Include="C03_casting.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="printf02.c">
+    <ClCompile Include="C04_oper2.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="printf03.c">
+    <ClCompile Include="C05_if.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="MyName.c">
+    <ClCompile Include="C06_if2.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="printf04.c">
+    <ClCompile Include="C07_switch.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="value.c">
+    <ClCompile Include="C08_for.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="value2.c">
+    <ClCompile Include="C09_while.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="value3.c">
+    <ClCompile Include="C10_else.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="value4.c">
+    <ClCompile Include="C11_gugudan.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="value5.c">
+    <ClCompile Include="C12_func.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="value6.c">
+    <ClCompile Include="C13_func2.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="scanf.c">
+    <ClCompile Include="C14_func3.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="scanf2.c">
+    <ClCompile Include="C15_func4.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="Myscanf2.c">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="Myscanf.c">
+    <ClCompile Include="C16_guesangi.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
