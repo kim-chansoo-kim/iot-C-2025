@@ -400,7 +400,7 @@ IoT 개발자 C언어 리포지토리
 	}
 	```
 
-<img src="C:\Work\C\iot-C-2025\image\배열정리표.png" width="700">
+	<img src='./image/배열정리표.png' width="700">
 
 
 - 포인터(pointer) - 주소 - 주소의 크기는 컴퓨터 환경따라 다르다.

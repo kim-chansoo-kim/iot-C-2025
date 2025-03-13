@@ -54,7 +54,7 @@
     <ClCompile Include="c12_pointer8.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="c13_cahr.c">
+    <ClCompile Include="c13_char.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="c14_char2.c">
