@@ -373,3 +373,82 @@ IoT 개발자 C언어 리포지토리
 			return 0;
 		}
 		```
+
+## 3일차
+- 배열
+	- 같은 자료형의 값들을 하나의 연속된 메모리 공간에 저장하는 자료구조
+	- 기초 배열
+	```C
+	#include <stdio.h>
+
+	int main()
+	{
+		int ary[5] = { 1, 2, 3, 4, 5 };		// 가장 기본적인 형태
+		int ary2[] = { 6, 7, 8, 9, 10 };	// 이미 배열의 크기가 정해짐
+		int ary3[5];						
+		// int ary4[];								
+
+		for (int i = 0; i < 5; i++) {
+			printf("ary[%d]: %d\n", i, ary[i]);
+			printf("ary2[%d]: %d\n", i, ary2[i]);
+		}
+
+		ary[2] = 100;						// ary[2]를 100으로 바꿈
+		printf("ary[2]: %d\n", ary[2]);
+
+		return 0;
+	}
+	```
+
+<img src="C:\Work\C\iot-C-2025\image\배열정리표.png" width="700">
+
+
+- 포인터(pointer) - 주소 - 주소의 크기는 컴퓨터 환경따라 다르다.
+	- 포인터 변수 - 주소를 저장할 수 있는 변수(크기는 무조건 4byte)
+				  - 포인터 변수의 크기는 타입에 상관없이 일정하다. 왜냐하면, 주소의 크기는 일정하기 때문이다.
+	- 기초 포인터
+	```C
+	#include <stdio.h>
+
+	int main()
+	{
+		int p;				// int타입의 p라는 변수를 선언
+		int* p;				// int타입의 "포인터 변수" p를 선언 - 포인터 변수크기는 무조건 4byte
+		char* pc;			// char타입의 "포인터 변수" pc를 선언 - 포인터 변수크기는 무조건 4byte
+							// point변수에 붙은 *은 아무런 의미가 없고 그냥 선언
+		double *pd;			// 이름에 붙이나 자료형에 붙이나 상관은 없음
+		int num = 100;
+		printf("num의 주소: %p\t", &num);
+		printf("num의 값: %d\n", num);
+		int* p = &num;												// point변수에 붙은 *은 아무런 의미가 없고 그냥 선언
+		printf("포인터변수 p에 저장된 값(주소): %p\t", p);
+		printf("포인터변수 p가 가리키는 곳의 값: %d\n", *p);		// * 간접 참조 연산자
+	
+		num += 1;
+		printf("num의 값: %d, p가 가리키는 값: %d\n", num, *p);		// 변수의 값을 변경함 - 101
+		*p += 1;
+		printf("num의 값: %d, p가 가리키는 값: %d\n", num, *p);		// 포인터로도 접근 가능 - 102
+			return 0;
+	}
+	```
+
+	- 두 값을 바꾸는 알고리즘
+	```C
+	#include <stdio.h>
+
+	int main()
+	{	
+		// 변경 전
+		int a = 10;
+		int b = 20;
+		printf("변경 전 a: %d, b: %d\n", a, b);
+
+		// 변경 후 - 임시변수 선언
+		int temp = a;
+		a = b;
+		b = temp;
+		printf("변경 후 a: %d, b: %d\n", a, b);
+
+		return 0;
+	}
+	```
