@@ -178,7 +178,8 @@ IoT 개발자 C언어 리포지토리
 	```
 
 ## 2일차
-- 논리·비트 연산자
+
+### 논리·비트 연산자
 	1. && -> AND (둘 다 참이어야 참)
 	2. || -> OR (둘 중 하나라도 참이면 참)
 	3. ! -> NOT (참을 거짓으로, 거짓을 참으로)
@@ -265,7 +266,7 @@ IoT 개발자 C언어 리포지토리
 	}
 	```
 
-- 제어문
+### 제어문
 	1. 선택제어문(if, switch)
 		- if문을 활용한 간단한 숫자찾기
 		```C
@@ -449,6 +450,58 @@ IoT 개발자 C언어 리포지토리
 		b = temp;
 		printf("변경 후 a: %d, b: %d\n", a, b);
 
+		return 0;
+	}
+	```
+- 
+- 문자(char)고급
+	- 문자 전용 함수 getchar, putchar - 송신(put), 수신(get)
+	```C
+	#include <stdio.h>
+
+	int main()
+	{
+		int ch;
+
+		ch = getchar();				// 한 문자를 읽어오는 함수 - 수신
+		putchar(ch);				// 한 문자만 출력하는 함수 - 송신
+		putchar('\n');
+
+		printf("input: %d\n", ch);
+
+		return 0;
+	}
+	```
+	- 예제: 입력받는 대문자를 소문자로. 또는, 소문자를 대문자로 변환하는 프로그램
+	```C
+	#define _CRT_SECURE_NO_WARNINGS
+
+	#include <stdio.h>
+
+	int main() {
+		char ch;
+
+		while(1){
+			printf("문자를 입력하세요 \n(종료버튼: [): ");
+			scanf("%c", &ch);
+
+			getchar();
+
+			if (ch == '[') {
+				break;
+			}
+
+			if (ch >= 'A' && ch <= 'Z')
+			{
+				ch = ch + 'a' - 'A';
+			}
+			else if (ch >= 'a' && ch <= 'z') 
+			{
+				ch = ch - 'a' + 'A';
+			}
+			printf("변환된 문자: %c\n\n", ch);
+		}
+    
 		return 0;
 	}
 	```

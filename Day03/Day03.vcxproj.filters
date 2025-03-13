@@ -33,5 +33,38 @@
     <ClCompile Include="c06_pointer3.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="sukjuntest.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="c07_pointer4.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="c08_pointer5.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="c09_pointer6.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="c10_pointer7.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="c11_pointer_exe.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="c12_pointer8.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="c13_cahr.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="c14_char2.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="c15_char3.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="c16_char4_exe.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
