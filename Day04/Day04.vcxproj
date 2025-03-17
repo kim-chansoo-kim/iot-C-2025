@@ -127,6 +127,9 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="2d_array.c" />
+    <ClCompile Include="2d_array2.c" />
+    <ClCompile Include="arrayPointer.c" />
     <ClCompile Include="c01_char4.c">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
@@ -152,9 +155,15 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="c09_strcmp.c" />
+    <ClCompile Include="dpointer.c" />
+    <ClCompile Include="dpointer2.c" />
+    <ClCompile Include="local_global.c" />
     <ClCompile Include="myStrcpy.c">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="pointerArray.c" />
+    <ClCompile Include="pointerArray2.c" />
+    <ClCompile Include="static.c" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
