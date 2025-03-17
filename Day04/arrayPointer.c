@@ -2,7 +2,7 @@
 	배열 포인터 : 포인터
 */
 
-#include <stdio.h>
+#include <stdio.h>;
 
 int main()
 {
